@@ -42,6 +42,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Characters"
+        ],
         "description": "",
         "parameters": [
           {
@@ -75,6 +78,9 @@
     },
     "/characters/{id}": {
       "get": {
+        "tags": [
+          "Characters"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -94,6 +100,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Characters"
+        ],
         "description": "",
         "parameters": [
           {
@@ -128,6 +137,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Characters"
+        ],
         "description": "",
         "parameters": [
           {
