@@ -3,7 +3,7 @@ const appConfig = require("./config/app");
 
 const doc = {
   info: {
-    title: 'My API',
+    title: 'API for Week05',
     description: 'Week05 API',
   },
   host: 'appConfig.host',

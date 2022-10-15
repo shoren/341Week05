@@ -7,7 +7,7 @@ const charactersRoute = require("./routes/characters");
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 const app = express();
 
 app
