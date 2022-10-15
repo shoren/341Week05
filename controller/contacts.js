@@ -1,7 +1,7 @@
 const { response } = require('express');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
-// GET
+// GET fdsaf
 const getAll = async (req, res, next) => { //Have to put the name of the Database and the collection that belongs to the database respectively
     const result = await mongodb.getDb().db('Test').collection('contacts').find();
     result.toArray().then((lists) => {
