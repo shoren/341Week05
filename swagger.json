@@ -11,6 +11,9 @@
     "http","https"
   ],
   "paths": {
+    "/gloves/":{
+
+    },
     "/characters/": {
       "get": {
         "description": "Get the characters",
