@@ -11,9 +11,9 @@
     "http","https"
   ],
   "paths": {
-    "/contacts/": {
+    "/characters/": {
       "get": {
-        "description": "Get the contacts",
+        "description": "Get the characters",
         "produces": [
           "application/json"
         ],
@@ -33,19 +33,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "Name": {
                   "example": "any"
                 },
-                "lastName": {
+                "Ascendancy": {
                   "example": "any"
                 },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
+                "LeagueStart": {
                   "example": "any"
                 }
               }
@@ -62,7 +56,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/characters/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -97,19 +91,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "Name": {
                   "example": "any"
                 },
-                "lastName": {
+                "Ascendancy": {
                   "example": "any"
                 },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
+                "LeagueStart": {
                   "example": "any"
                 }
               }
