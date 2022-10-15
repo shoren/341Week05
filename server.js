@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const charactersRoute = require("./routes/characters");
+const glovesRoute = require("./routes/gloves");
 
 
 const swaggerUi = require('swagger-ui-express');
@@ -18,7 +19,8 @@ app
     next();
   })
   // .use('/', require('./routes'));
-  .use("/characters", charactersRoute);
+  .use("/characters", charactersRoute)
+  .use("/gloves", glovesRoute);
 
 mongodb.initDb((err, mongodb) => {
   if (err) {

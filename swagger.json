@@ -73,7 +73,7 @@
         }
       }
     },
-    "/Gloves/{id}": {
+    "/gloves/{id}": {
       "get": {
         "tags": [
           "Gloves"

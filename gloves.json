@@ -1,0 +1,32 @@
+{
+    "gloves1": {
+    
+        "CharacterName": "IronFortress",
+        "prefix1": "Life",
+        "prefix2": "Mana",
+        "prefix3": "Attack Speed",
+        "suffix1": "Dexterity",
+        "suffix2": "Intelligence",
+        "suffix3": "Strength"
+    },
+    "gloves2": {
+    
+        "CharacterName": "Legolas",
+        "prefix1": "Life",
+        "prefix2": "Cold Damage",
+        "prefix3": "Attack Speed",
+        "suffix1": "Lightning Resistance",
+        "suffix2": "Cold Resistance",
+        "suffix3": "Fire Resistance"
+    },
+    "gloves3": {
+    
+        "CharacterName": "GraveCalamity",
+        "prefix1": "Life",
+        "prefix2": "Mana",
+        "prefix3": "Minion Damage",
+        "suffix1": "Fire Resistance",
+        "suffix2": "Cold Resistance",
+        "suffix3": "Lightning Resistance"
+    }
+}
