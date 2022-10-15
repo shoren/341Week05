@@ -24,8 +24,12 @@
     "/gloves/":{
 
     },
-    "/characters/": {
+    "/characters/":
+     {
       "get": {
+        "tags": [
+          "Characters"
+        ],
         "description": "Get the characters",
         "produces": [
           "application/json"
