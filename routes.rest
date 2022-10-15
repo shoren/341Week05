@@ -10,7 +10,7 @@ GET https://assign1.onrender.com/contacts/632e74c4f82c1783bd83483a
 GET https://assign1.onrender.com/contacts/632e74c4f82c1783bd83483b
 
 ### initial site
-GET https://assign1.onrender.com/
+GET https://week05.onrender.com
 ###
 POST http://assign1.onrender.com/contacts HTTP/1.1
 content-type: application/json

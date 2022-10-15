@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
-const contactsRoute = require("./routes/contacts");
+const charactersRoute = require("./routes/characters");
 
 
 const swaggerUi = require('swagger-ui-express');
@@ -18,7 +18,7 @@ app
     next();
   })
   // .use('/', require('./routes'));
-  .use("/contacts", contactsRoute);
+  .use("/characters", charactersRoute);
 
 mongodb.initDb((err, mongodb) => {
   if (err) {

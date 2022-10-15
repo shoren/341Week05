@@ -4,7 +4,7 @@ const appConfig = require("./config/app");
 const doc = {
   info: {
     title: 'My API',
-    description: 'Temple API',
+    description: 'Week05 API',
   },
   host: 'appConfig.host',
   schemes: [appConfig.protocol],

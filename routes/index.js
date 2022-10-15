@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const openCors = require("../middleware/openCors");
-router.use('/contacts',require('./contacts'));
+router.use('/characters',require('./characters'));
 router.use('/api-docs', require('./docs'));
 router.use([openCors, express.json()]);
 

@@ -1,0 +1,17 @@
+{
+    "character1": {
+        "Name":"IronFortress",
+        "Ascendancy":"Juggernaut",
+        "LeagueStart":"No"
+    },
+    "character2": {
+        "Name":"Legolas",
+        "Ascendancy":"Deadeye",
+        "LeagueStart":"No"
+    },
+    "character3": {
+        "Name":"GraveCalamity",
+        "Ascendancy":"Necromancer",
+        "LeagueStart":"Yes"
+    }
+}
