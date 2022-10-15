@@ -1,0 +1,83 @@
+//Real Time 
+//Grab all the contacts
+GET https://assign1.onrender.com/contacts 
+###
+//grab one of the contacts by id
+GET https://assign1.onrender.com/contacts/632e74c4f82c1783bd834839 
+###
+GET https://assign1.onrender.com/contacts/632e74c4f82c1783bd83483a 
+###
+GET https://assign1.onrender.com/contacts/632e74c4f82c1783bd83483b
+
+### initial site
+GET https://assign1.onrender.com/
+###
+POST http://assign1.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Sanchez",
+    "lastName":"Tony",
+    "email":"not@not.com",
+    "favoriteColor":"Green",
+    "birthday":"21/21/2012"
+}
+
+### have to go get the id to update
+PUT http://assign1.onrender.com/contacts/633b9e6e982726d98afbb6d3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"ironman",
+    "lastName":"noName",
+    "email":"gmail@gmail.com",
+    "favoriteColor":"Orange",
+    "birthday":"12/12/2000"
+}
+
+### have to go get the id to delete
+DELETE http://assign1.onrender.com/contacts/633b9e2cd5402c80fe4f63c4 HTTP/1.1
+
+
+
+
+
+
+
+//Locally
+###
+GET http://localhost:8080/contacts/
+###
+GET http://localhost:8080/contacts/632e74c4f82c1783bd834839
+###
+GET http://localhost:8080/contacts/632e74c4f82c1783bd83483a
+###
+GET http://localhost:8080/contacts/632e74c4f82c1783bd83483b
+###
+#
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Sanchez",
+    "lastName":"Tony",
+    "email":"not@not.com",
+    "favoriteColor":"Green",
+    "birthday":"21/21/2012"
+}
+
+###
+PUT http://localhost:8080/contacts/633ba1e8641965a51eba620e HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"ironman",
+    "lastName":"nope",
+    "email":"gmail@gmail.com",
+    "favoriteColor":"Orange",
+    "birthday":"12/12/2000"
+}
+
+###
+DELETE http://localhost:8080/contacts/633ba1e8641965a51eba620e HTTP/1.1
+
