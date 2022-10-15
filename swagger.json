@@ -10,6 +10,16 @@
   "schemes": [
     "http","https"
   ],
+  "tags": [
+    {
+      "name": "Characters",
+      "description": "About Characters"
+    },
+    {
+      "name": "Gloves",
+      "description": "About Gloves"
+    }
+  ],
   "paths": {
     "/gloves/":{
 
