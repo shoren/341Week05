@@ -26,7 +26,7 @@ const getAllCharacters = async (req, res, next) => {
         res.status(200).json(lists[0]);
     });
     } catch (error) {
-      next(error);
+      res.status(422);
     }
   };
 
