@@ -26,7 +26,7 @@ const getAllCharacters = async (req, res, next) => {
         res.status(200).json(lists[0]);
     });
     } catch (error) {
-      res.status(422);
+      res.status(422).json("invalid input");
     }
   };
 
