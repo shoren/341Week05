@@ -22,7 +22,7 @@ content-type: application/json
 }
 
 ### have to go get the id to update
-PUT http://assign1.onrender.com/contacts/633b9e6e982726d98afbb6d3 HTTP/1.1
+PUT http://three41week05.onrender.com/characters/633b9e6e982726d98afbb6d3 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 }
 
 ### have to go get the id to delete
-DELETE http://assign1.onrender.com/contacts/633b9e2cd5402c80fe4f63c4 HTTP/1.1
+DELETE http://three41week05.onrender.com/characters/633b9e2cd5402c80fe4f63c4 HTTP/1.1
 
 
 
