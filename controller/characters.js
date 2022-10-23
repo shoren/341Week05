@@ -45,7 +45,7 @@ const getAllCharacters = async (req, res, next) => {
       // const { ingredient } = req.query || const ingredient = req.query.ingredient  These two are equivalent but the left one is shorter 
     }
     try {
-      if(!Name || !Ascendancy || !LeagueStart){ // error validation
+      if(!character.Name || !character.Ascendancy || !character.LeagueStart){ // error validation
         res.status(400).send({message: "Please fill out all parts of the form"});
         return;
       }
