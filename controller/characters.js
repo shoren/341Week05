@@ -52,9 +52,7 @@ const getAllCharacters = async (req, res, next) => {
       const result = await mongodb.getDb().db('Week05').collection('characters').insertOne(character); //insertOne
       if(result.acknowledged){
         res.status(201).json(response);
-      } else {
-        res.status(500).json('Unable to create character at this time.');
-    }
+      }
     } catch (error) {
       res.status(500).json('Unable to create character at this time.');
     }
