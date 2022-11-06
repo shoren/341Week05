@@ -1,6 +1,6 @@
 const authorizationController = {
     login:(req,res) =>{
-        res.send("login endpoint");
+        res.redirect("https://www.google.com");
     },
 };
 
