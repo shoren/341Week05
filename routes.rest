@@ -67,4 +67,12 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8081/characters/633ba1e8641965a51eba620e HTTP/1.1
+###
+
+
+
+GET https://dev-0y5jer0ax4ksli5b.us.auth0.com/authorize?response_type=code&
+
+###
+GET https://dev-0y5jer0ax4ksli5b.us.auth0.com/authorize
 

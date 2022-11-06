@@ -12,7 +12,8 @@ const getAllCharacters = async (req, res, next) => {
       res.status(200).json(lists);
     });
   } catch (error) {
-    next(error);
+    res.status(500).json('Unable to locate characters at this time.');
+    return;
     // res.status(500).send({
     //   message: error.message || 'Some error occurred while retrieving users.'})
     };        //Have to put the name of the Database and the collection that belongs to the database respectively 
@@ -51,7 +52,7 @@ const getAllCharacters = async (req, res, next) => {
       }
       const result = await mongodb.getDb().db('Week05').collection('characters').insertOne(character); //insertOne
       if(result.acknowledged){
-        res.status(201).json(response);
+        res.status(201).json("Character Created");
       }
     } catch (error) {
       res.status(500).json('Unable to create character at this time.');
@@ -60,14 +61,14 @@ const getAllCharacters = async (req, res, next) => {
 
   // PUT working
   const updateCharacter = async (req, res, next) => {
-    const userId = new ObjectId(req.params.id);
-    const character = {
+    try {
+      const userId = new ObjectId(req.params.id);
+      const character = {
       Name: req.body.Name,
       Ascendancy: req.body.Ascendancy,
       LeagueStart: req.body.LeagueStart
     }
-    try {
-      if(!Name || !Ascendancy || !LeagueStart){ // error validation
+      if(!character.Name || !character.Ascendancy || !character.LeagueStart){ // error validation
         res.status(400).send({message: "Please fill out all parts of the form"});
         return;
       }
