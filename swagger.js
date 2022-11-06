@@ -6,7 +6,7 @@ const doc = {
     title: 'API for Week05',
     description: 'Week05 API',
   },
-  host: 'appConfig.host',
+  host: '',
   schemes: [appConfig.protocol],
 };
 
