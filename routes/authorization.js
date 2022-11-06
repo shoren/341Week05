@@ -1,9 +1,9 @@
-const { Router } = require("express");
-const AuthorizationController = require("../controllers/authorization.controller");
+const express = require("express");
+const router = express.Router();
 
-const router = Router();
+const AuthorizationController = require("../controller/authorization.controller");
 
-router.get("/login", AuthorizationController.login);
-router.get("/callback", AuthorizationController.callback);
+router.get("/login",AuthorizationController.login);
+router.get("/callback",AuthorizationController.callback)
 
 module.exports = router;
