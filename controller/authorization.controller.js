@@ -1,13 +1,77 @@
+// const { json } = require("body-parser");
+// const appConfig = require("../config/app");
+
+// const AuthorizationController = {
+//     login:(req,res) =>{
+//         const authorizatinUrl = `${appConfig.authorizationHost}/authorize?response_type=code&client_id=${appConfig.clientID}&redirect_uri=${encodeURIComponent(appConfig.redirectUrl)}&state=1234&scope=openid%20profile%20email`;
+//         res.redirect(authorizatinUrl);
+//     },
+//     callback: async (req, res) =>{
+//         const response = await fetch(`${appConfig.authorizationHost}/oauth/token`,{
+//             method: 'POST',
+//             headers: {
+//                 "Content-Type": "application/x-www-form-urlencoded",
+//             },
+//             body: new URLSearchParams({
+//                 grant_type: "authorization_code",
+//                 client_id: appConfig.clientID,
+//                 client_secret: appConfig.clientSecret,
+//                 redirect_uri: appConfig.redirectUrl,
+//                 scope: "openid profile email",
+//                 code: req.query,code,
+//             }), 
+//         });
+
+//         const jsonResponse = await response.json();
+
+//         res.json(jsonResponse);
+//     },
+// };
+
+// module.exports = AuthorizationController
 const appConfig = require("../config/app");
+// const axios = require("axios");
 
 const AuthorizationController = {
-    login:(req,res) =>{
-        const authorizatinUrl = `${appConfig.authorizationHost}/authorize?response_type=code&client_id=${appConfig.clientID}&redirect_uri=${encodeURIComponent(appConfig.redirectUrl)}&state=1234&scope=openid%20profile%20email`;
-        res.redirect(authorizatinUrl);
-    },
-    callback: (req, res) =>{
-        res.json(req.query.code)
-    },
+  login: (req, res) => {
+    const authorizationURL = `${
+      appConfig.authorizationHost
+    }/authorize?response_type=code&client_id=${
+      appConfig.clientID
+    }&redirect_uri=${encodeURIComponent(
+      appConfig.redirectUrl
+    )}&scope=openid%20profile%20email`;
+
+    res.redirect(authorizationURL);
+  },
+
+  callback: async (req, res, next) => {
+    try {
+      const response = await fetch(
+        "https://dev-0y5jer0ax4ksli5b.us.auth0.com/oauth/token",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            grant_type: "authorization_code",
+            client_id: appConfig.clientID,
+            client_secret: appConfig.clientSecret,
+            redirect_uri: appConfig.redirectUrl,
+            scope: "openid profile email",
+            code: req.query.code,
+          }),
+        }
+      );
+
+      const json = await response.json();
+
+      res.json(json);
+    } catch (error) {
+      next(error);
+    }
+  },
 };
 
-module.exports = AuthorizationController
+module.exports = AuthorizationController;
