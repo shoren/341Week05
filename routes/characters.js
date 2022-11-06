@@ -4,6 +4,10 @@ const express = require('express');
 const router = express.Router();
 const contactsController = require('../controller/characters');
 
+const loadUser = require("../middleware/loadUser");
+
+router.use([loadUser])
+
 // Get all of the documents in the contacts collection
 router.get('/', contactsController.getAllCharacters);
 

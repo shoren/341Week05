@@ -6,7 +6,7 @@ const AuthorizationController = {
         res.redirect(authorizatinUrl);
     },
     callback: (req, res) =>{
-        res.json(req.queury.code)
+        res.json(req.query.code)
     },
 };
 
